@@ -36,4 +36,6 @@ wheels/
 
 # Data
 data/raw/
-data/processed/
+.DS_Store
+logs/
+.env
