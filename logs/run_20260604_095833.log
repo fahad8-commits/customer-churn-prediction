@@ -1,0 +1,14 @@
+[2026-06-04 09:58:33] INFO - project_logger - Starting project verification tests...
+[2026-06-04 09:58:33] INFO - project_logger - Directory verified: data
+[2026-06-04 09:58:33] INFO - project_logger - Directory verified: src
+[2026-06-04 09:58:33] INFO - project_logger - Directory verified: tests
+[2026-06-04 09:58:33] INFO - project_logger - Directory verified: notebooks
+[2026-06-04 09:58:33] INFO - project_logger - Directory verified: src/utils
+[2026-06-04 09:58:33] INFO - project_logger - Directory verified: logs
+[2026-06-04 09:58:33] INFO - project_logger - Config loading verified (Default PROJECT_NAME matches)
+[2026-06-04 09:58:33] INFO - project_logger - Sample data verified: 1000 rows found at /Users/fahadsathik/Documents/vs code projects/demo project 1/data/raw/sample_data.csv
+[2026-06-04 09:58:33] INFO - project_logger - Package file verified: src/__init__.py
+[2026-06-04 09:58:33] INFO - project_logger - Package file verified: tests/__init__.py
+[2026-06-04 09:58:33] INFO - project_logger - Package file verified: data/__init__.py
+[2026-06-04 09:58:33] INFO - project_logger - Package file verified: src/utils/__init__.py
+[2026-06-04 09:58:33] INFO - project_logger - All verification tests passed successfully!
