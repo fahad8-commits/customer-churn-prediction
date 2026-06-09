@@ -1,83 +1,243 @@
-# Demo Project 1
+# Customer Churn Prediction Platform
 
-A structured data science project boilerplate with built-in logging, configuration management, and sample data generation.
+## Overview
 
-## 📁 Project Structure
+A machine learning-based Customer Churn Prediction Platform that predicts whether a telecom customer is likely to leave the service. The project includes data preprocessing, feature engineering, class imbalance handling using SMOTE, machine learning model comparison, FastAPI-based prediction API, ETL pipeline, and Tableau dashboard visualizations.
 
-```text
-.
-├── data/               # Project data (raw, processed, etc.)
-│   └── raw/            # Raw input data
-├── logs/               # Application logs
-├── notebooks/          # Jupyter notebooks for EDA
-├── src/                # Source code
-│   └── utils/          # Utility modules (config, logger)
-├── tests/              # Unit and integration tests
-├── .env                # Local environment variables (ignored by git)
-├── .env.example        # Template for environment variables
-├── .gitignore          # Git ignore file
-├── generate_sample_data.py # Script to generate test data
-├── requirements.txt    # Project dependencies
-└── README.md           # Project documentation
-```
+---
 
-## 🚀 Getting Started
+## Project Objectives
 
-### 1. Setup Virtual Environment
-```bash
-python3 -m venv .venv
-source .venv/bin/activate  # On Windows: .venv\Scripts\activate
-```
+- Predict customer churn using machine learning models
+- Handle class imbalance using SMOTE
+- Compare multiple classification algorithms
+- Deploy a REST API for real-time predictions
+- Build business intelligence dashboards using Tableau
+- Create an ETL pipeline for automated data processing
 
-### 2. Install Dependencies
-```bash
-pip install --upgrade pip
-pip install -r requirements.txt
-```
+---
 
-### 3. Configuration
-Copy the example environment file and fill in your credentials:
-```bash
-cp .env.example .env
-```
-Edit `.env` to include your AWS credentials and project settings.
+## Dataset
 
-### 4. Generate Sample Data
-Run the following command to generate a sample dataset in `data/raw/`:
-```bash
-export PYTHONPATH=$PYTHONPATH:.
-python generate_sample_data.py
-```
+Dataset: Telco Customer Churn Dataset
 
-### 5. Start Jupyter Notebook
-To start the Jupyter Notebook server (using local directories for configuration to avoid permission issues):
-```bash
-source .venv/bin/activate
-export JUPYTER_CONFIG_DIR=$(pwd)/.jupyter_config
-export JUPYTER_RUNTIME_DIR=$(pwd)/.jupyter_runtime
-export JUPYTER_DATA_DIR=$(pwd)/.jupyter_data
-export IPYTHONDIR=$(pwd)/.ipython
-jupyter notebook --port=8889
-```
+Records: ~7,000 customers
 
-## 🛠 Utilities
+Target Variable: Churn (Yes/No)
 
-### Logger
-Standardized logging to both console and file:
-```python
-from src.utils.logger import logger
-logger.info("Your message here")
-```
+### Features
 
-### Config
-Centralized environment variable management:
-```python
-from src.utils.config import config
-print(config.PROJECT_NAME)
-```
+- Gender
+- Senior Citizen
+- Partner
+- Dependents
+- Tenure
+- Phone Service
+- Internet Service
+- Contract Type
+- Payment Method
+- Monthly Charges
+- Total Charges
 
-## 🧪 Testing
-Run tests using `pytest` (install it first if needed):
-```bash
-pytest tests/
-```
+---
+
+## Project Architecture
+
+Raw Data
+
+↓
+
+Data Cleaning
+
+↓
+
+Feature Engineering
+
+↓
+
+Train/Test Split
+
+↓
+
+SMOTE Balancing
+
+↓
+
+Model Training
+
+↓
+
+Model Evaluation
+
+↓
+
+FastAPI REST API
+
+↓
+
+Tableau Dashboard
+
+---
+
+## Technologies Used
+
+### Programming
+
+- Python
+
+### Data Analysis
+
+- Pandas
+- NumPy
+
+### Machine Learning
+
+- Scikit-Learn
+- XGBoost
+- Imbalanced-Learn (SMOTE)
+
+### Visualization
+
+- Matplotlib
+- Tableau
+
+### API Development
+
+- FastAPI
+- Uvicorn
+
+### Version Control
+
+- Git
+- GitHub
+
+---
+
+## Machine Learning Models
+
+### Logistic Regression
+
+Baseline classification model used for churn prediction.
+
+### Decision Tree
+
+Tree-based classification model for interpretability.
+
+### Random Forest
+
+Ensemble model with hyperparameter tuning.
+
+### XGBoost
+
+Gradient boosting model for enhanced predictive performance.
+
+---
+
+## Model Files
+
+text models/ ├── logistic_regression.pkl ├── decision_tree.pkl ├── random_forest.pkl ├── random_forest_baseline.pkl ├── random_forest_tuned.pkl ├── random_forest_engineered.pkl └── xgboost_model.pkl 
+
+---
+
+## Data Preprocessing
+
+### Completed Steps
+
+- Missing value handling
+- Data cleaning
+- Categorical encoding
+- Feature engineering
+- Train/Test split
+- Feature scaling
+- SMOTE oversampling
+
+---
+
+## ETL Pipeline
+
+The ETL pipeline performs:
+
+### Extract
+
+- Load customer churn dataset
+
+### Transform
+
+- Data cleaning
+- Missing value handling
+- Feature preparation
+
+### Load
+
+- Store processed datasets for model training and dashboard analysis
+
+---
+
+## Tableau Dashboard
+
+Dashboard Components:
+
+### KPI Cards
+
+- Total Customers
+- Total Churned Customers
+- Churn Rate
+- Average Monthly Charges
+
+### Business Analysis
+
+- Churn Overview
+- Contract Analysis
+- Monthly Charges Analysis
+- Tenure Analysis
+
+---
+
+## FastAPI REST API
+
+### Run API
+
+bash uvicorn api:app --reload 
+
+### Example Endpoint
+
+http POST /predict 
+
+Returns churn prediction results for new customer data.
+
+---
+
+## Project Structure
+
+text customer-churn-prediction/  ├── data/ ├── etl/ ├── models/ ├── notebooks/ ├── src/ ├── tests/ ├── api.py ├── requirements.txt ├── README.md 
+
+---
+
+## Key Achievements
+
+- Built end-to-end customer churn prediction pipeline
+- Implemented SMOTE for class imbalance handling
+- Trained and compared multiple machine learning models
+- Developed FastAPI REST API for real-time inference
+- Created Tableau business intelligence dashboard
+- Implemented ETL workflow for automated preprocessing
+- Managed project using Git and GitHub
+
+---
+
+## Future Improvements
+
+- Cloud deployment
+- AWS S3 integration
+- Docker containerization
+- CI/CD pipeline
+- Automated model retraining
+- Streamlit web application
+
+---
+
+## Author
+
+Fahad J
+
+Data Science Student | Machine Learning Enthusiast | AI Developer
