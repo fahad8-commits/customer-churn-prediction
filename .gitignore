@@ -39,3 +39,11 @@ data/raw/
 .DS_Store
 logs/
 .env
+
+# Test files
+simple_test.py
+test_prediction.py
+
+# Old model files
+models/random_forest_tuned_OLD_BROKEN.pkl
+models/feature_names.pkl
