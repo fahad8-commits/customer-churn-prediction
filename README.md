@@ -173,6 +173,14 @@ The ETL pipeline performs:
 
 ---
 
+## Live Demo
+
+🚀 **Streamlit Web App**: https://customer-churn-prediction-mtgddwpytygmj7mxyrlvbp.streamlit.app/
+
+🔌 **FastAPI Backend**: https://churn-api.onrender.com
+
+---
+
 ## Tableau Dashboard
 
 Dashboard Components:
@@ -227,12 +235,10 @@ text customer-churn-prediction/  ├── data/ ├── etl/ ├── models
 
 ## Future Improvements
 
-- Cloud deployment
 - AWS S3 integration
 - Docker containerization
 - CI/CD pipeline
 - Automated model retraining
-- Streamlit web application
 
 ---
 
