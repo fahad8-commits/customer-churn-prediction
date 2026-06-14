@@ -12,7 +12,7 @@ st.sidebar.markdown("---")
 st.sidebar.header("Configuration")
 api_url = st.sidebar.text_input( 
     "API Endpoint", 
-    value="http://localhost:8000",
+    value="https://churn-api.onrender.com",
     help="Your FastAPI endpoint URL" 
 )
 
